@@ -7,10 +7,10 @@ import java.io.IOException;
 public class Homework3 {
 	public static void main(String[] args) throws IOException {
 		Scanner input = new Scanner(new File("triangles.conf"));
-		int triangleheight = input.nextInt();
-		char char1 = '*'; // The character for the space around the triangle.
-		char char2 = ' '; // the character for the space inside the triangle
-		int totalRows = input.nextInt(); // the number of rows of triangles
+		int triangleheight = Integer.parseInt(input.nextLine());
+		String char1 = input.nextLine(); // The character for the space around the triangle.
+		String char2 = input.nextLine(); // the character for the space inside the triangle
+		int totalRows = Integer.parseInt(input.nextLine()); // the number of rows of triangles
 		for(int row = 1; row <= totalRows; row++) { // This loop runs every row of triangles. 
 			for(int y = 1; y <= triangleheight; y++) { // This loop draws each line within one row of triangles
 				int padding = ((triangleheight*totalRows*2)-(triangleheight*2*row))/2; // crazy shizzle to determine the size of the padding on each side of the triangle(s)
